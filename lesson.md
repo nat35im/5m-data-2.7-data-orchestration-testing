@@ -141,7 +141,8 @@ Note that to run dagster successfully, you need to:
     ```yaml
     GITHUB_TOKEN='github_pat_xxx'
     ```
-3. In `extra/dagster_orchestration_dbt/profiles.yml`, enter your GCP project ID in `project:`
+2. In `extra/dagster_orchestration_dbt/profiles.yml`, enter your GCP project ID in `project:`
+3. Since the DBT job inserts data in your BigQuery, you are reminded to do `gcloud auth application-default login` to authenticate yourself to your GCP project
 
 After the configuration above, we can run dagster using the command below:
 ```bash
